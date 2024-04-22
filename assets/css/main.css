@@ -1,0 +1,29 @@
+body {
+    color: #2f353c;
+    font-family: 'Roboto Sans', sans-serif;
+    font-size: 14px;
+    background-color: #e9edf3;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card {
+    margin-bottom: 1.5rem;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+}
+
+.separator .line {
+    height: 1px;
+    flex: 1;
+    background-color: #dee2e6;
+}
+
+.separator p {
+    padding: 0 1rem;
+}

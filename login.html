@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Authentication | Kobicypher</title>
+
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="assets/css/icons.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="assets/css/dark-theme.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="mx-3 mx-lg-0">
+
+    <div class="card my-5 col-xl-9 col-xxl-8 mx-auto rounded-4 overflow-hidden border-3 p-3">
+      <div class="row g-3">
+        <div class="col-lg-6 d-flex">
+          <div class="card-body p-5 w-100">
+            <h4 class="fw-bold text-start">Get Started</h4>
+            <p class="mb-0 text-start">Enter your credentials to login your account</p>
+
+            <div class="form-body mt-4 mb-4">
+              <form class="row g-3 text-start">
+
+                <div class="col-12">
+                  <label for="inputEmailAddress" class="form-label">Email Address</label>
+                  <input type="email" class="form-control text-start" id="" placeholder="kobicypher@example.com">
+                </div>
+
+                <div class="col-12">
+                  <label for="inputChoosePassword" class="form-label">Password</label>
+                  <div class="input-group" id="show_hide_password">
+                    <a href="javascript:;" class="input-group-text bg-transparent"><i
+                        class="bi bi-eye-slash-fill"></i></a>
+
+                    <input type="password" class="form-control text-start" id="inputChoosePassword" value="password"
+                      placeholder="Enter Password">
+
+                  </div>
+                </div>
+
+                <div class="col-md-6 text-end"> <a href="forgot-password.html">Forgot Password</a>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Remember Me</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="text-start">
+                    <p class="mb-0">Don't have an account? <a href="register.html">Sign up</a>
+                    </p>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
+            <div class="separator">
+              <div class="line"></div>
+              <p class="mb-0 fw-bold">OR</p>
+              <div class="line"></div>
+            </div>
+
+            <div class="row g-3 my-0">
+              <div class="col-6 col-lg-6">
+                <button
+                  class="btn btn-light py-2 font-text1 fw-bold d-flex align-items-center justify-content-center w-100">Log
+                  In with Google</button>
+              </div>
+              <div class="col col-lg-6">
+                <button
+                  class="btn btn-light py-2 font-text1 fw-bold d-flex align-items-center justify-content-center w-100">
+                  Log In with Apple
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-lg-flex d-none">
+          <div class="p-3 rounded-4 w-100 d-flex align-items-center justify-content-center border-3 bg-primary">
+            <img src="assets/images/login.png" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/jquery.min.js"></script>
+
+  <!-- PASSWORD TOGGLE LOGIC -->
+
+  <script>
+    $(document).ready(function () {
+      $("#show_hide_password a").on("click", function (event) {
+        event.preventDefault();
+
+        let passwordInput = $("#show_hide_password input");
+        let eyeIcon = $("#show_hide_password i");
+
+        if (passwordInput.attr("type") === "password") {
+          passwordInput.attr("type", "text");
+          eyeIcon.removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
+        } else {
+          passwordInput.attr("type", "password");
+          eyeIcon.removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
+        }
+      })
+    })
+  </script>
+
+</body>
+
+</html>
